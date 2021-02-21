@@ -1,0 +1,29 @@
+@font-face{
+    font-family: 'diamond';
+    src: url('../fonts/diamond/diamond.ttf');
+    font-weight: 700;
+}
+
+@font-face{
+    font-family: 'teko';
+    src: url('../fonts/teko/teko.ttf');
+    font-weight: 300;
+}
+
+@font-face{
+    font-family: 'katerine';
+    src: url('../fonts/katerine/katerine.ttf');
+    font-weight: 300;
+}
+
+@font-face{
+    font-family: 'federov';
+    src: url('../fonts/federov/federov.ttf');
+    font-weight: 300;
+}
+
+@font-face{
+    font-family: 'record';
+    src: url('../fonts/record/record.ttf');
+    font-weight: 300;
+}

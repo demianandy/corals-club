@@ -1,0 +1,625 @@
+.opisanie{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    padding: 0 50px;
+}
+
+.top-info,
+.info-info{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    padding: 50px 0;
+    justify-content: space-between;
+    position: relative;
+}
+
+.top-info:before,
+.info-info:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -4;
+    box-sizing: inherit;
+}
+
+.top-info:before{
+    border-bottom: 1px solid black;
+}
+
+.info-info:before{
+    border-top: 1px solid white;
+}
+
+.study,
+.present{
+    width: calc(60% - 20px);
+    min-height: 100px;
+    display: flex;
+    padding: 50px 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.study::before,
+.present::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background: #4186D3;
+    z-index: -10;
+    transition: all 0.5s ease;
+    box-sizing: inherit;
+}
+/* 
+.present::before{
+    background: pink;
+} */
+
+.present:hover:before,
+.study:hover:before{
+    opacity: 0.7;
+    transition: all 0.5s ease;
+}
+
+.present{
+    width: calc(40% - 20px);
+}
+
+.study .image{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.study .image img{
+    height: 100%;
+}
+
+.study .image-info{
+    width: 50%;
+    min-height: 100px;
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+}
+
+.study .image-info .image-info-top:before,
+.study .image-info .image-info-bottom:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: -4;
+    box-sizing: inherit;
+}
+
+.study .image-info .image-info-bottom:before{
+    border-top: 1px solid black;
+}
+
+.study .image-info .image-info-top:before{
+    border-bottom: 1px solid white;
+}
+
+.study .image-info .image-info-top{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.study .image-info .image-info-top .name_eng{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.study .image-info .image-info-top span:nth-of-type(1){
+    font-size: 24px;
+    font-family: "federov";
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    letter-spacing: +2px;
+    margin-bottom: 12px;
+    cursor: default;
+    z-index: 10;
+    text-shadow: 0 1px 1px black;
+}
+
+.study .image-info .image-info-top span:nth-of-type(2){
+    font-size: 20px;
+    font-family: "federov";
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.6;
+    font-weight: 400;
+    margin-bottom: 7px;
+    cursor: default;
+    z-index: 10;
+    text-shadow: 0 1px 1px black;
+}
+
+.study .image-info .image-info-top p{
+    font-size: 16px;
+    font-family: "federov";
+    text-transform: uppercase;
+    color: blue;
+    text-shadow: 0 1px 1px black;
+    opacity: 1;
+    font-weight: 700;
+    width: 100%;
+    text-align: end;
+    margin-bottom: 15px;
+    cursor: default;
+    z-index: 10;
+}
+
+.study .image-info .image-info-bottom{
+    padding-top: 15px;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.study .image-info .image-info-bottom p{
+    font-family: "federov";
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: default;
+    z-index: 10;
+    color: white;
+    text-shadow: 0 1px 1px black;
+}
+
+.study .image-info .image-info-bottom .right{
+    color: pink;
+}
+
+.study .image-info .image-info-bottom .form{
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    z-index: 10;
+}
+
+.study .image-info .image-info-bottom .form a{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    background: #52bb44;
+    font-size: 20px;
+    font-family: "federov";
+    transition: all 0.5s ease;
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.study .image-info .image-info-bottom .form a:hover{
+    background: green;
+    transition: all 0.5s ease;
+}
+
+/* ========================= СОСТАВ ============================ */
+
+.present{
+    display: flex;
+    flex-direction: column;
+}
+
+.present .sostav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.present .sostav p,
+.paragraph{
+    font-size: 18px;
+    font-family: "federov";
+    color: white;
+    font-weight: 200;
+    text-transform: none;;
+    vertical-align: middle;
+    text-shadow: 0 1px 1px black;
+    cursor: default;
+}
+
+.present .sostav .big-bon{
+    text-transform: lowercase;
+}
+
+.present .sostav span,
+.present .sostav .ssilka{
+    font-family: "federov";
+    color: pink;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: none;
+    text-shadow: 0 1px 1px black;
+    cursor: default;
+}
+
+.present .sostav .ssilka{
+    color: #52bb44;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.present .sostav .ssilka:hover{
+    margin-left: 5px;
+    transition: all 0.5s ease;
+}
+
+
+.present .sostav:nth-of-type(2){
+    padding: 25px 0;
+}
+
+.present .sostav .ref{
+    text-align: center;
+    width: 50%;
+    font-family: 'federov';
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #52bb44;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    outline: none;
+    z-index: 100;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.present .sostav .ref:hover{
+    background: green;
+    transition: all 1s ease;
+}
+
+.present .sostav .h4,
+.present .sostav .sale{
+    font-size: 45px;
+    color: blue;
+    text-shadow: 1px 1px 1px black;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    font-weight: 700;
+    letter-spacing: +5px;
+    cursor: default;
+}
+
+.present .sostav p{
+    width: auto;
+}
+
+.present .sostav .h4 i{
+    margin-top: 3px;
+    font-size: 35px;
+    color: blue;
+    text-shadow: 1px 1px 1px black;
+    display: flex;
+    cursor: default;
+    margin-left: 5px;
+    transition: all 0.5s ease;
+}
+
+.present .sostav .h4 i.active,
+.present .sostav p.active{
+    color: red;
+    transition: all 0.5s ease;
+}
+
+.paragraph{
+    text-transform: none;
+    text-align: justify;
+}
+
+
+/* ======================================= ТЕКСТ ======================================== */
+
+.info-info{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    white-space: pre-wrap;
+    display: none;
+}
+
+.info-info.active{
+    display: block;
+}
+
+.info-info p{
+    width: 100%;
+    min-height: 10px;
+    padding: 50px 40px;
+    position: relative;
+    color: black;
+    font-size: 24px;
+    text-shadow: none;
+    display: flex;
+    z-index: 1;
+}
+
+.info-info p:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background: white;
+    z-index: -1;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+}
+
+.info-info p:hover:before{
+    transition: all 0.5s ease;
+    opacity: 0.8;
+}
+
+
+@media (max-width: 1220px) {
+    /* .study .image-info .image-info-top span:nth-of-type(1){
+        font-size: 20px;
+    }
+    
+    .study .image-info .image-info-top span:nth-of-type(2){
+        font-size: 16px;
+    }
+    .present .sostav span,
+    .present .sostav .ssilka{
+        font-size: 16px;
+    } */
+    .study .image-info .image-info-bottom p{
+        font-size: 18px;
+    }
+    .present .sostav .h4,
+    .present .sostav .sale{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .study .image-info .image-info-bottom p{
+        font-size: 16px;
+    }
+    .present .sostav .h4,
+    .present .sostav .sale{
+        font-size: 30px;
+    }
+    .present .sostav .h4 i{
+        font-size: 27px;
+    }
+    .present .sostav p,
+    .paragraph,
+    .present .sostav .ssilka{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .study .image-info .image-info-bottom p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .present .sostav p,
+    .paragraph,
+    .present .sostav .ssilka{
+        font-size: 15px;
+    }
+    .study,
+    .present{
+        padding: 20px 20px;
+    }
+    .study .image-info .image-info-top p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 888px) {
+    .study,
+    .present{
+        width: 100%;
+        padding: 30px 50px;
+    }
+    .study{
+        margin-bottom: 50px;
+    }
+    .top-info{
+        flex-wrap: wrap;
+    }
+
+    .study .image-info .image-info-bottom p{
+        font-size: 22px;
+    }
+    .present .sostav .h4,
+    .present .sostav .sale{
+        font-size: 45px;
+    }
+    .present .sostav .h4 i{
+        font-size: 30px;
+    }
+    .present .sostav p,
+    .paragraph,
+    .present .sostav .ssilka{
+        font-size: 20px;
+    }
+    .study .image-info .image-info-top p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 850px) {
+    .study .image-info .image-info-bottom p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 780px) {
+    .study .image-info .image-info-bottom p{
+        font-size: 18px;
+    }
+    .present .sostav .h4,
+    .present .sostav .sale{
+        font-size: 40px;
+    }
+    .present .sostav .h4 i{
+        font-size: 27px;
+    }
+    .present .sostav p,
+    .paragraph,
+    .present .sostav .ssilka{
+        font-size: 18px;
+    }
+    .study .image-info .image-info-top p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 720px) {
+    .study,
+    .present{
+        padding: 40px 20px;
+        height: 100%;
+    }
+    .study .image-info .image-info-bottom .name_eng p{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .study .image-info .image-info-bottom .name_eng p span{
+        width: 100%;
+    }
+    .image-info-bottom{
+        display: flex;
+        height: 500px;
+        width: 100%;
+    }
+    .image-info-bottom .name-eng{
+        width: 100%;
+        min-height: 10px;
+        display: flex;
+    }
+    .image-info-bottom form{
+        width: 100%;
+        min-height: 10px;
+        display: flex;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 534px) {
+    .study .image-info .image-info-bottom .form a{
+        font-size: 15px;
+    }
+    .study .image-info .image-info-bottom .form{
+        justify-content: flex-start;
+    }
+    .study .image-info .image-info-bottom p{
+        font-size: 14px;
+    }
+    .study .image-info .image-info-top p{
+        font-size: 14px;
+    }
+    .study .image-info .image-info-top span:nth-of-type(1){
+        font-size: 20px;
+    }
+    
+    .study .image-info .image-info-top span:nth-of-type(2){
+        font-size: 16px;
+    }
+    .info-info p{
+        font-size: 20px;
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .opisanie{
+        padding: 0 20px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .study .image{
+        display: none;
+    }
+    .study .image-info{
+        width: 100%;
+    }
+    .study .image-info .image-info-bottom .form{
+        justify-content: flex-end;
+    }
+
+
+
+    .study .image-info .image-info-top span:nth-of-type(1){
+        font-size: 22px;
+    }
+    
+    .study .image-info .image-info-top span:nth-of-type(2){
+        font-size: 18px;
+    }
+    .study .image-info .image-info-top p{
+        font-size: 18px;
+    }
+    .study .image-info .image-info-bottom p{
+        font-size: 20px;
+    }
+    .study .image-info .image-info-bottom .form a{
+        font-size: 20px;
+    }
+    .info-info p{
+        font-size: 18px;
+        padding: 25px 20px;
+    }
+}

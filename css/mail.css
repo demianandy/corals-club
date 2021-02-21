@@ -1,0 +1,317 @@
+.mail{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    margin-top: 5px;
+    flex-direction: column;
+    padding: 0 50px;
+}
+
+.mail-content,
+.write{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 40px 50px;
+    align-items: stretch;
+}
+
+.mail-content .admin,
+.mail-content .hello{
+    width: calc(25% - 20px);
+    min-height: 100%;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.mail-content::before,
+.write::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    box-sizing: inherit;
+}
+
+.mail-content::before{
+    border-bottom: 1px solid black;
+}
+
+.write::before{
+    border-top: 1px solid white;
+}
+
+.mail-content .hello{
+    width: calc(75% - 20px);
+    padding: 25px 50px;
+    flex-direction: column;
+}
+
+.mail-content .hello span{
+    width: 100%;
+    text-align: center;
+    font-family: "federov";
+    font-size: 28px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 25px;
+    cursor: default;
+}
+
+.mail-content .hello p{
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    font-family: "federov";
+    font-size: 24px;
+    color: black;
+    font-weight: 300;
+    justify-content: space-between;
+    line-height: 35px;
+    cursor: default;
+    /* border: 1px solid red; */
+}
+
+
+.mail-content .hello p a{
+    font-family: "federov";
+    font-size: 24px;
+    color: red;
+    font-weight: 300;
+    cursor: pointer;
+    text-shadow: 0 0 1px #52bb44;
+}
+
+.mail-content .hello::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background: white;
+    z-index: -1;
+    transition: all 1s ease;
+}
+
+.mail-content .hello:hover:before{
+    opacity: 0.7;
+    transition: all 1s ease;
+}
+
+.mail-content .admin img{
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: all 1s ease;
+}
+
+.mail-content .admin img:hover{
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.write{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+}
+
+.write form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.write form textarea{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 25px;
+    background: #4186D3;
+    resize: none;
+    opacity: 0.8;
+    transition: all 1s ease;
+
+    text-align: justify;
+    font-family: "federov";
+    font-size: 24px;
+    color: black;
+    font-weight: 700;
+    line-height: 35px;
+    margin-bottom: 25px;
+}
+
+::-webkit-input-placeholder{
+    color:    black;
+    opacity: 0.5;
+ }
+
+.write form textarea:focus,
+.write form input:focus{
+    box-shadow: 2px 2px 7px 1px black;
+    transition: all 1s ease;
+}
+
+.write form .inputs{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.write form .inputs input,
+.write form .inputs span{
+    width: 30%;
+    height: 100%;
+    margin-right: 15px;
+}
+
+.write form .inputs span{
+    display: flex;
+    overflow: hidden;
+    opacity: 0.8;
+    text-align: justify;
+    font-family: "federov";
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 5px 5px blue;
+    font-weight: 700;
+    align-items: center;
+    padding: 0 25px;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    transition: all 1s ease;
+}
+
+.write form .inputs span,
+.write form .inputs input:last-child{
+    width: 20%;
+    margin-right: 0;
+}
+
+.write form .inputs input{
+    display: flex;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #4186D3;
+    opacity: 0.7;
+    transition: all 1s ease;
+    text-align: justify;
+    font-family: "federov";
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
+    align-items: center;
+    padding: 0 25px;
+    align-self: center;
+}
+
+.write form .inputs .connector{
+    /* color: #52bb44; */
+    background: #52bb44;
+    box-shadow: 2px 2px 10px 2px black;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.write form .inputs .connector.active{
+    box-shadow: none;
+    transition: all 0.5s ease;
+}
+
+.write form .inputs span{
+    opacity: 0;
+}
+
+.write form .inputs span.active{
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.write form .inputs span.invalid{
+    opacity: 1;
+    transition: all 0.5s ease;
+    text-shadow: 0 5px 5px black;
+}
+
+@media (max-width: 1200px) {
+    .mail-content{
+        flex-wrap: wrap;
+    }
+    .mail-content .admin,
+    .mail-content .hello{
+        width: 100%;
+    }
+    .mail-content .admin{
+        margin-bottom: 50px;
+        height: 800px;
+    }
+}
+
+@media (max-width: 900px) {
+    .mail-content .admin{
+        height: 550px;
+    }
+}
+
+@media (max-width: 700px) {
+    .mail{
+        padding: 0 0px;
+    }
+    .mail-content,
+    .write{
+        padding: 40px 25px;
+    }
+    .write form .inputs{
+        flex-direction: column;
+        height: 200px;
+    }
+    .write form .inputs input,
+    .write form .inputs span{
+        width: 70%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .write form .inputs input,
+    .write form .inputs span{
+        width: 100%;
+        margin-right: 0;
+    }
+    .write form .inputs input:last-child{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .mail-content .admin{
+        display: none;
+    }
+    .mail-content .hello{
+        padding: 15px 20px;
+    }
+    .mail-content .hello p{
+        font-size: 20px;
+    }
+}
